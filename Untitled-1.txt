@@ -1,0 +1,11 @@
+def is_possible_missed_exponent(number):
+    str_num = str(number)
+    return str_num.startswith("10") and len(str_num) >= 3 and '0' * (len(str_num) - 2) in str_num
+
+t = int(input())
+for _ in range(t):
+    a = int(input())
+    if is_possible_missed_exponent(a):
+        print("YES")
+    else:
+        print("NO")
